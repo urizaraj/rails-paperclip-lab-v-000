@@ -21,9 +21,13 @@ ActiveRecord::Schema.define(version: 20180402152239) do
 
   create_table "songs", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "artist_id"
+    t.string   "song_album_cover_file_name"
+    t.string   "song_album_cover_content_type"
+    t.integer  "song_album_cover_file_size"
+    t.datetime "song_album_cover_updated_at"
     t.string   "album_cover_file_name"
     t.string   "album_cover_content_type"
     t.integer  "album_cover_file_size"
